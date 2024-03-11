@@ -13,11 +13,17 @@ from src.ordenamiento import evaluar
 
 class TestOrdenamiento(unittest.TestCase):
     def testNo(self):
-        valor_esperado = "0 1 6 7"
+        valor_esperado = "0, 1, 6, 7"
         valor_actual = evaluar(7, 0, 6, 1)
         self.assertEqual(valor_esperado, valor_actual)
     
     # TODO: Agrega tus otros casos de prueba aquí
+    
+class TestOrdenamiento(unittest.TestCase):
+    def testNo(self):
+        valor_esperado = "1, 2, 7, 8"
+        valor_actual = evaluar(7, 1, 8, 2)
+        self.assertEqual(valor_esperado, valor_actual)
     
 
 if __name__ == '__main__':
