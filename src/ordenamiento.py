@@ -1,6 +1,19 @@
 def evaluar(numero1, numero2, numero3, numero4):
     # TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-    return "";
+    def ordenar_numeros(numeros):
+        for i in range(len(numeros) - 1):
+            for j in range(len(numeros) - i - 1):
+                if numeros[j] > numeros[j + 1]:
+                    numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]
+        # Devolvemos la cadena ordenada dentro de la función de ordenamiento
+        return ", ".join(map(str, numeros))
+
+    # Creamos una lista con los números proporcionados
+    numeros = [numero1, numero2, numero3, numero4]
+    # Llamamos a la función de ordenamiento y devolvemos el resultado
+    return ordenar_numeros(numeros)
+
+   
 
 if __name__ == '__main__':
     print("Número 1:", end="")
